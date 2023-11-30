@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Bank Website</h1>
+    <form action="/withdraw" method="post">
+        <label for="amount">Amount to Withdraw:</label>
+        <input type="number" name="amount" required>
+        <label for="pin">PIN:</label>
+        <input type="password" name="pin" required>
+        <button type="submit">Withdraw</button>
+    </form>
+
+    <form action="/check_balance" method="post">
+        <label for="pin">PIN:</label>
+        <input type="password" name="pin" required>
+        <button type="submit">Check Balance</button>
+    </form>
+
+    <form action="/deposit" method="post">
+        <label for="amount">Amount to Deposit:</label>
+        <input type="number" name="amount" required>
+        <button type="submit">Deposit</button>
+    </form>
+</body>
+</html>
